@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <head>
+         <title>HTML Forms</title>
+      </head>
+      <style>
+      form {text-align: center;}   
+      h1 {text-align: center;}
+      h3 {text-align: center;}
+      img {width: 100%;}
+      </style>
+
+      <img src="TheLastSupperDaVinci.jpg" alt="The Last Summer" height = "550">
+      <h3>Dine Like It's Your Last Supper</h3>
+      <h1><i>Input your restaurant selection criteria:</i></h1>
+
+
+      <form method="post">
+
+         <br>
+         <label for="Ambiance">Choose your ambiance:</label>
+         <br>
+         <select name="Ambiance" id="Ambiance">
+            <option value="no preference">no preference</option>
+            <option value="casual">casual</option>
+            <option value="classy">classy</option>
+            <option value="divey">divey</option>
+            <option value="hipster">hipster</option>
+            <option value="intimate">intimate</option>
+            <option value="romantic">romantic</option>
+            <option value="touristy">touristy</option>
+            <option value="trendy">trendy</option>
+            <option value="upscale">upscale</option>
+         </select>
+
+         <br>
+         <br>
+         <br>
+
+         <label for="Type">Choose your restaurant type:</label>
+         <br>
+         <select name="Type" id="Type">
+            <option value="no preference">no preference</option>
+            <option value="American (Traditional)">American (Traditional)</option>
+            <option value="American (New)">American (New)</option>
+            <option value="Cajun/Creole">Cajun/Creole</option>
+            <option value="Tex-Mex">Tex-Mex</option>
+            <option value="Southern">Southern</option>
+            <option value="Hawaiian">Hawaiian</option>
+            <option value="Pan Asian">Pan Asian</option>
+            <option value="Taiwanese">Taiwanese</option>
+            <option value="Hakka">Hakka</option>
+            <option value="Singaporean">Singaporean</option>
+            <option value="Korean">Korean</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Taiwanese">Taiwanese</option>
+            <option value="Shanghainese">Shanghainese</option>
+            <option value="HongKongStyleCafe">HongKongStyleCafe</option>
+            <option value="Cantonese">Cantonese</option>
+            <option value="Asian Fusion">Asian Fusion</option>
+         </select>
+
+         <br>
+         <br>
+         <br>
+
+         <label for="Day">Choose which day you'd like to dine:</label>
+         <br>
+         <select name="Day" id="Day">
+            <option value="mon">mon</option>
+            <option value="tues">tues</option>
+            <option value="wed">wed</option>
+            <option value="thurs">thurs</option>
+            <option value="fri">fri</option>
+            <option value="sat">sat</option>
+            <option value="sun">sun</option>
+         </select>
+
+         <br>
+         <br>
+         <br>
+
+         <label for="Time">Input the time you would like to dine in the format hour.min, so 11:45 would be 11.45:</label>
+         <br>
+         <input type="text" id="Time" name="Time" placeholder="11.45">
+         <br>
+         <br>
+         <br>
+
+         <label for="Lat">Input the approximate latitude where you would like to dine (-90 to 90):</label>
+         <br>
+         <input type="text" id="Lat" name="Lat" placeholder="None">
+         <br>
+         <br>
+         <br>
+
+         <label for="Lon">Input the approximate longitude where you would like to dine (-180 to 180):</label>
+         <br>
+         <input type="text" id="Lon" name="Lon" placeholder="None">
+         <br>
+         <br>
+         <br>
+
+         <label for="MinReview">Enter the minimum number of reviews you want the restaurant to have:</label>
+         <br>
+         <input type="text" id="MinReview" name="MinReview" placeholder = 0>
+         <br>
+         <br>
+         <br>
+
+         <label for="Minstar">Choose the minimum number of stars:</label>
+         <br>
+         <select name="Minstar" id="Minstar">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+         </select>
+
+         <br>
+         <br>
+         <br>
+         <input type="submit" onclick='getInfo()'>
+      </form>
+
+
+
+
+
+
+
+
+   </body>
+</html>
+
+
+<script>
+
+function getInfo()
+{
+var ambiance = document.getElementById("Ambiance").value;
+var cost = document.getElementById("Cost").value;
+var type = document.getElementById("Type").value;
+var choices = {"ambiance": ambiance, "cost": cost, "type": type};
+var json_choices = JSON.stringify(choices);
+input = [ambiance, cost, type]
+}
+
+</script>
+
+
